@@ -1,17 +1,144 @@
 header {
   background: #00d1cd;
+  color: #444444;
+  font-family: 'Raleway', sans-serif;
+  border-bottom: 4px solid #f30067;
+}
+header .header-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  flex-wrap: no-wrap;
   padding: 20px 0;
 }
-header nav {
+@media (min-width: 1000px) {
+  header .header-container {
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+header .header-container h1 {
+  font-style: italic;
+}
+header .header-container nav {
   width: 90%;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  flex-wrap: no-wrap;
+}
+@media (min-width: 1000px) {
+  header .header-container nav {
+    width: 30%;
+  }
+}
+header .header-container nav a {
+  text-decoration: none;
+  color: #444444;
+}
+.main-content {
+  padding: 12px;
+  min-height: 90vh;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background: linear-gradient(to top, #FFFFFF, #FFEFBA);
+  color: #444444;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: no-wrap;
+}
+.main-content .description {
+  margin: 10px 0 20px;
+}
+.main-content .preview {
+  height: 45vh;
+  width: 90vw;
+  background: #000;
+  padding: 5 20px;
+  border: 2px solid #f30067;
+}
+@media (min-width: 1000px) {
+  .main-content .preview {
+    width: 50vw;
+  }
+}
+.main-content .how-it-works {
+  margin: 20px;
+  text-align: left;
+}
+.main-content .how-it-works ul {
+  list-style-type: circle;
+}
+.main-content .call-to-action {
+  padding: 10px 20px;
+  transition: border 0.2s ease-in-out;
+  background: linear-gradient(to right, #FFC837, #FF8008);
+  color: #444444;
+  border-radius: 10px;
+  font-size: 1.2em;
+  border-style: solid;
+  margin: 0 auto;
+}
+.main-content .call-to-action:focus {
+  outline: none;
+  border-color: #444444;
+}
+.team-page {
+  background: linear-gradient(to top, #FFFFFF, #FFEFBA);
+  min-height: 90vh;
+  font-family: 'Raleway', sans-serif;
+}
+.team-page .team-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.team-page .team-container .team-member {
+  width: 45%;
+  margin: 20px 0;
+  text-align: center;
+}
+.team-page .team-container .team-member .team-member-name {
+  font-size: 1.25rem;
+}
+.team-page .team-container .team-member .team-member-role {
+  font-size: 0.8rem;
+}
+.team-page .team-container .team-member .team-member-img {
+  margin-top: 5px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.team-page .team-container .team-member-description {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 20%;
+  padding-top: 100px;
+  width: 95%;
+  height: 50%;
+  overflow: auto;
+  background: #fff;
+  transform: translate(-50%);
+}
+.team-page .team-container .show {
+  display: block;
+}
+footer {
+  background: linear-gradient(to bottom, #FFFFFF, #FFEFBA);
+  text-align: center;
 }
 * {
   margin: 0;

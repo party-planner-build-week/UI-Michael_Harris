@@ -1,6 +1,16 @@
-.flexy(@dir: row, @justify: space-between){
+.flexy(@dir: row, @justify: space-between, @wrap: no-wrap){
     display: flex;
     justify-content: @justify;
     flex-direction: @dir;
     align-items: center;
+    flex-wrap: @wrap;
+}
+.btn (@padding: 10px 20px, @background: @gradient-orange){
+    padding: @padding;
+    transition: border .2s ease-in-out;
+    background: @background;
+    color: @font-secondary-color;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border-style: solid;
 }

@@ -1,9 +1,33 @@
-header{
+  header{
     background: @background-main-color;
-    .flexy(column);
-    padding: 20px 0;;
-    nav {
+    color: @font-secondary-color;
+    font-family: @font-family;
+    border-bottom: 4px solid @background-secondary-color;
+    .header-container{
+      .flexy(column);
+
+      padding: 20px 0;
+      @media@desktop {
+        flex-direction: row;
+        width: 70%;
+        margin: 0 auto;
+      }
+      h1{
+        font-style: italic;
+      }
+      nav {
         width: 90%;
+        padding-top: 10px;
         .flexy();
+        @media@desktop{
+          width: 30%;
+        }
+          a{
+            text-decoration: none;
+            color: @font-secondary-color;
+          }
+      }
     }
-}
+
+  }
+
