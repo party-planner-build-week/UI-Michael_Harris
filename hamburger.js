@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-const main = document.querySelector('.main-content');
+const main = document.querySelector('main');
 
 const closeMenu = () => {
     if(hamburger.classList.contains('is-active')){
