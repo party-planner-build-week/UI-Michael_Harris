@@ -189,7 +189,7 @@ header .header-container nav a {
   }
 }
 .team-page {
-  background: linear-gradient(to top, #FFFFFF, #FFEFBA);
+  background: #fff;
   min-height: 90vh;
   font-family: 'Raleway', sans-serif;
 }
@@ -201,13 +201,35 @@ header .header-container nav a {
   align-items: center;
   flex-wrap: wrap;
 }
+@media (min-width: 1000px) {
+  .team-page .team-container {
+    padding-top: 150px;
+    width: 70%;
+  }
+}
 .team-page .team-container .team-member {
   width: 45%;
   margin: 20px 0;
   text-align: center;
 }
+@media (min-width: 1000px) {
+  .team-page .team-container .team-member {
+    width: 25%;
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: no-wrap;
+  }
+}
 .team-page .team-container .team-member .team-member-name {
   font-size: 1.25rem;
+}
+@media (min-width: 1000px) {
+  .team-page .team-container .team-member .team-member-name {
+    font-size: 1.5rem;
+  }
 }
 .team-page .team-container .team-member .team-member-description {
   display: none;
@@ -215,11 +237,22 @@ header .header-container nav a {
 .team-page .team-container .team-member .team-member-role {
   font-size: 0.8rem;
 }
+@media (min-width: 1000px) {
+  .team-page .team-container .team-member .team-member-role {
+    font-size: 1.1rem;
+  }
+}
 .team-page .team-container .team-member .team-member-img {
-  margin-top: 5px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  object-fit: cover;
+}
+@media (min-width: 1000px) {
+  .team-page .team-container .team-member .team-member-img {
+    width: 180px;
+    height: 180px;
+  }
 }
 .info-modal {
   display: none;
@@ -234,6 +267,12 @@ header .header-container nav a {
   transform: translate(-50%);
   box-shadow: 0 10px 15px #000;
 }
+@media (min-width: 1000px) {
+  .info-modal {
+    width: 50%;
+    height: 50%;
+  }
+}
 .info-modal .modal-header {
   padding: 0;
 }
@@ -247,17 +286,32 @@ header .header-container nav a {
 .info-modal .header-content {
   padding: 20px;
 }
+@media (min-width: 1000px) {
+  .info-modal .header-content {
+    padding: 40px;
+  }
+}
 .info-modal .header-content img {
   width: 100px;
 }
 .info-modal .name {
   font-size: 1.75rem;
 }
+@media (min-width: 1000px) {
+  .info-modal .name {
+    font-size: 2rem;
+  }
+}
 .info-modal .role {
   font-size: 1.25rem;
 }
 .info-modal .info {
   padding: 10px;
+}
+@media (min-width: 1000px) {
+  .info-modal .info {
+    padding: 30px;
+  }
 }
 .show {
   display: block;
