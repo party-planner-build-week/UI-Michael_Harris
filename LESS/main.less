@@ -1,38 +1,108 @@
 .main-content{
+    .main{
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media@desktop{
+            min-height: 90vh;
+        }
+        h1{
+            margin: 10px;
+            font-size: 2.5rem;
+        }
+        .btn-div{
+            margin-top: 50px;
+            height: 110px;
+            .flexy(column);
+            @media@desktop{
+                width: 40%;
+                .flexy(row);
+                align-content: center;
+            }
+        }
+    }
     padding: 12px;
     min-height: 90vh;
     font-family: @font-family;
     text-align: center;
-    background: @gradient-white;
+    background: @background-white;
     color: @font-secondary-color;
     letter-spacing: 2px;
     .flexy(column, space-around);
     .description {
-        margin: 10px 0 20px;
+        margin: 20px auto;
+        font-size: 1.1rem;
+        width: 90%;
+        @media@desktop{
+            width: 60%;
+            font-size: 1.5rem;
+        }
     }
     .preview {
-        height: 45vh;
+        height: 25vh;
         width: 90vw;
         background: #000;
         padding: 5 20px;
-        border: 2px solid @background-secondary-color;
         @media@desktop{
             width: 50vw;
+            height: 50vh;
         }
     }
     .how-it-works {
         margin: 20px;
         text-align: left;
-        ul {
-            list-style-type: circle;
+        p{
+            margin: 20px;
+            text-align: center;
+        }
+    }
+    a {
+        text-decoration: none;
+        background: #fff;
+        .btn(10px 20px,#fff);
+        &:focus{
+            outline: none;
+            border-color: @background-secondary-color;
         }
     }
     .call-to-action {
         .btn();
-        margin: 0 auto;
         &:focus{
             outline: none;
-            border-color: @background-tertiary-color;
+            border-color: @background-secondary-color;
+        }
+    }
+    #learn {
+        h2 {
+            text-align: center;
+            margin: 40px;
+        }
+        @media@desktop{
+            width: 70%;
+        }
+        .left{
+            @media@desktop{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    .learn-part {
+        padding: 10px;
+        @media@desktop{
+            .flexy();
+            margin: 40px auto;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            @media@desktop{
+                width: 50%;
+
+            }
         }
     }
 }
