@@ -1,0 +1,54 @@
+nav {
+    padding-top: 8px;
+    height: 100vh;
+    background: @background-tertiary-color;
+    border-bottom: 2px solid @background-secondary-color;
+    @media@desktop {
+        padding: 0;
+        width: 30%;
+        height: inherit;
+        .hamburger {
+            display: none;
+        }
+
+    }
+    .nav-links{
+        padding-top: 80px;
+        z-index: 20;
+        position: fixed;
+        left: -200px;
+        top: 0;
+        .flexy(column, flex-start);
+        background: @background-secondary-color;
+        height: 100vh;
+        width: 180px;
+        transition: left .3s ease-in-out;
+        @media@desktop {
+            padding: 0;
+            z-index: -20;
+            .flexy(row, space-between);
+            position: static;
+            background: @background-tertiary-color;
+            color: @font-main-color;
+            height: inherit;
+            width: initial;
+        }
+
+    }
+
+      a{
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 40px 0;
+        text-decoration: none;
+        color: @font-main-color;
+        @media@desktop{
+            margin: 0;
+            font-size: 1.4rem;
+        }
+      }
+      .show-nav {
+        left: 0;
+      }
+
+  }
