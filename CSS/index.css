@@ -215,6 +215,9 @@ nav .show-nav {
     display: flex;
     flex-direction: row-reverse;
   }
+  .main-content #learn .left p::before {
+    background: #00d1cd;
+  }
 }
 .main-content .learn-part {
   padding: 10px;
@@ -228,6 +231,16 @@ nav .show-nav {
     flex-wrap: no-wrap;
     margin: 100px auto;
     font-size: 2rem;
+  }
+  .main-content .learn-part p::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #f30067;
+    transform: translateY(50%);
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   }
 }
 .main-content .learn-part img {

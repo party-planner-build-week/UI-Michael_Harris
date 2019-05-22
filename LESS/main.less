@@ -90,6 +90,9 @@
             @media@desktop{
                 display: flex;
                 flex-direction: row-reverse;
+                p::before{
+                    background: @background-main-color;
+                }
             }
         }
     }
@@ -99,6 +102,16 @@
             .flexy();
             margin: 100px auto;
             font-size: 2rem;
+            p::before{
+                content: '';
+                display: block;
+                position: absolute;
+                background: @background-secondary-color;
+                transform: translateY(50%);
+                height: 20px;
+                width: 20px;
+                clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            }
         }
         img {
             width: 100%;
@@ -109,5 +122,6 @@
 
             }
         }
+
     }
 }
