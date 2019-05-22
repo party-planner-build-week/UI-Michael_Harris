@@ -39,13 +39,14 @@ class MemberModal {
 }
 
 const closeModal = (event) => {
+  event.stopPropagation();
+
   if(modal.classList.contains('show')){
     modal.classList.toggle('show');
     teamPage.style.filter = 'none';
   } else {
     
   }
-  event.stopPropagation();
 }
 
 closeBtn.addEventListener('click', closeModal);
