@@ -1,5 +1,5 @@
 header {
-  background: #444444;
+  background: #111;
   color: #eaeaea;
   font-family: 'Raleway', sans-serif;
   border-bottom: 4px solid #f30067;
@@ -27,13 +27,13 @@ header .header-container h1 {
 nav {
   padding-top: 8px;
   height: 100vh;
-  background: #444444;
+  background: #111;
   border-bottom: 2px solid #f30067;
 }
 @media (min-width: 1000px) {
   nav {
     padding: 0;
-    width: 30%;
+    width: 35%;
     height: inherit;
   }
   nav .hamburger {
@@ -66,7 +66,7 @@ nav .nav-links {
     align-items: center;
     flex-wrap: no-wrap;
     position: static;
-    background: #444444;
+    background: #111;
     color: #eaeaea;
     height: inherit;
     width: initial;
@@ -82,7 +82,8 @@ nav a {
 @media (min-width: 1000px) {
   nav a {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 2px;
   }
 }
 nav .show-nav {
@@ -172,7 +173,6 @@ nav .show-nav {
 .main-content a {
   text-decoration: none;
   padding: 10px 20px;
-  transition: border 0.2s ease-in-out;
   background: #fff;
   color: #444444;
   border-radius: 10px;
@@ -185,9 +185,8 @@ nav .show-nav {
 }
 .main-content .call-to-action {
   padding: 10px 20px;
-  transition: border 0.2s ease-in-out;
-  background: #53DCDC;
-  color: #444444;
+  background: #f30067;
+  color: #eaeaea;
   border-radius: 10px;
   font-size: 1.2em;
   border-style: solid;
@@ -370,7 +369,7 @@ nav .show-nav {
   display: block;
 }
 footer {
-  background: #444444;
+  background: #111;
   text-align: center;
   height: 50px;
   margin-top: 100px;
@@ -383,6 +382,7 @@ footer {
 footer a {
   text-decoration: none;
   color: #eaeaea;
+  padding: 2px;
 }
 * {
   margin: 0;
