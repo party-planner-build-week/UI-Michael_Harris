@@ -115,8 +115,7 @@ nav .show-nav {
   left: 0;
 }
 .main-content {
-  padding: 12px;
-  min-height: 90vh;
+  min-height: 100vh;
   font-family: 'Merriweather', serif;
   text-align: center;
   background: #fff;
