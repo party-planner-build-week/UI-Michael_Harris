@@ -43,7 +43,7 @@ class MemberLink {
     
     this.info = element.querySelector('.team-member-description');
     this.showMore = element.querySelector('.show-more');
-    this.showMore.addEventListener('click', () => this.showInfo());
+    this.element.addEventListener('click', () => this.showInfo());
   }
 
   showInfo(){
