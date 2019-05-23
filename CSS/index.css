@@ -1,7 +1,15 @@
+@keyframes slideIn {
+  from {
+    top: 0;
+  }
+  to {
+    top: 20%;
+  }
+}
 header {
   background: #111;
   color: #eaeaea;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   border-bottom: 4px solid #f30067;
 }
 header .header-container {
@@ -57,7 +65,7 @@ nav {
     position: absolute;
     right: 50px;
     border-bottom: 2px solid #f30067;
-    top: 62px;
+    top: 65px;
   }
 }
 nav .nav-links {
@@ -116,7 +124,7 @@ nav .show-nav {
 }
 .main-content {
   min-height: 100vh;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   text-align: center;
   background: #fff;
   color: #444444;
@@ -134,7 +142,7 @@ nav .show-nav {
 }
 .main-content .main-background {
   width: 100%;
-  background-image: url('../img/background.jpg');
+  background-image: url("../img/background.jpg");
   background-size: cover;
 }
 .main-content .main {
@@ -193,6 +201,11 @@ nav .show-nav {
   border-radius: 5px;
   color: #eaeaea;
 }
+@media (min-width: 700px) and (orientation: landscape) {
+  .main-content .description {
+    font-size: 1.6rem;
+  }
+}
 @media (min-width: 760px) {
   .main-content .description {
     font-size: 1.8rem;
@@ -202,23 +215,6 @@ nav .show-nav {
   .main-content .description {
     width: 60%;
     font-size: 1.5rem;
-  }
-}
-.main-content .preview {
-  height: 250px;
-  width: 90vw;
-  background: #000;
-  padding: 5 20px;
-}
-@media (min-width: 760px) {
-  .main-content .preview {
-    width: 100%;
-  }
-}
-@media (min-width: 1000px) {
-  .main-content .preview {
-    width: 50vw;
-    height: 300px;
   }
 }
 .main-content .how-it-works {
@@ -272,6 +268,14 @@ nav .show-nav {
   text-align: center;
   margin: 40px;
 }
+.main-content #learn h2::after {
+  content: "";
+  display: block;
+  width: 20%;
+  background: #111;
+  height: 2px;
+  margin: 0 auto;
+}
 @media (min-width: 1000px) {
   .main-content #learn h2 {
     font-size: 2.5rem;
@@ -320,7 +324,7 @@ nav .show-nav {
     position: relative;
   }
   .main-content .learn-part p::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     background: #f30067;
@@ -348,14 +352,14 @@ nav .show-nav {
 }
 @media (min-width: 1000px) {
   .main-content .learn-part img {
-    width: 50%;
+    width: 40%;
     margin: 0;
   }
 }
 .team-page {
   background: #fff;
   min-height: 90vh;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 .team-page .tab-links {
   display: flex;
@@ -369,7 +373,7 @@ nav .show-nav {
   .team-page .tab-links {
     width: 50%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
   }
   .team-page .tab-links .tab-link {
     margin: 0 20px;
@@ -380,6 +384,11 @@ nav .show-nav {
 }
 .team-page .team-container {
   margin: 0 auto;
+  border-right: 2px solid #f30067;
+  border-left: 2px solid #f30067;
+  border-top: 2px solid #00d1cd;
+  border-bottom: 2px solid #00d1cd;
+  box-shadow: 0 0 1rem #000;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -407,6 +416,9 @@ nav .show-nav {
     align-items: center;
     flex-wrap: no-wrap;
   }
+  .team-page .team-container .team-member:hover {
+    cursor: pointer;
+  }
 }
 .team-page .team-container .team-member .team-member-name {
   font-size: 1.25rem;
@@ -419,6 +431,9 @@ nav .show-nav {
 .team-page .team-container .team-member .team-member-description {
   display: none;
 }
+.team-page .team-container .team-member .github {
+  display: none;
+}
 .team-page .team-container .team-member .team-member-role {
   font-size: 0.8rem;
 }
@@ -426,9 +441,6 @@ nav .show-nav {
   .team-page .team-container .team-member .team-member-role {
     font-size: 1.1rem;
   }
-}
-.team-page .team-container .team-member .show-more:hover {
-  cursor: pointer;
 }
 .team-page .team-container .team-member .team-member-img {
   width: 120px;
@@ -452,7 +464,7 @@ nav .show-nav {
   left: 50%;
   top: 20%;
   width: 95%;
-  height: 50%;
+  height: 60%;
   overflow: auto;
   background: #fff;
   transform: translate(-50%);
@@ -464,7 +476,7 @@ nav .show-nav {
 @media (min-width: 1000px) {
   .info-modal {
     width: 50%;
-    height: 50%;
+    height: 60%;
   }
 }
 .info-modal .modal-header {
@@ -482,11 +494,14 @@ nav .show-nav {
 }
 @media (min-width: 1000px) {
   .info-modal .header-content {
-    padding: 40px;
+    padding: 20px 40px;
   }
 }
 .info-modal .header-content img {
-  width: 100px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .info-modal .name {
   font-size: 1.75rem;
@@ -505,10 +520,15 @@ nav .show-nav {
 @media (min-width: 1000px) {
   .info-modal .info {
     padding: 30px;
+    font-size: 1.6rem;
   }
+}
+.info-modal a {
+  color: #eaeaea;
 }
 .show {
   display: block;
+  animation: slideIn 0.3s ease-out;
 }
 footer {
   background: #111;

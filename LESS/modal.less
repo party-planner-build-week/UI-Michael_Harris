@@ -1,60 +1,64 @@
-.info-modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 20%;
-    width: 95%;
-    height: 50%;
-    overflow: auto;
-    background: #fff;
-    transform: translate(-50%);
-    box-shadow: 0 10px 15px #000;
-    .close{
-      &:hover{
-        cursor: pointer;
-      }
+.info-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 20%;
+  width: 95%;
+  height: 60%;
+  overflow: auto;
+  background: #fff;
+  transform: translate(-50%);
+  box-shadow: 0 10px 15px #000;
+  .close {
+    &:hover {
+      cursor: pointer;
     }
-    @media@desktop {
-      width: 50%;
-      height: 50%;
-    }
-    .modal-header{
-      padding: 0;
-      .close{
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        font-size: 3rem;
-        color: @font-main-color;
-      }
-    }
-  .header-content{
-      padding: 20px;
-      @media@desktop {
-        padding: 40px;
-      }
-      img {
-        width: 100px;
-      }
-
-    }
-    .name{
-      font-size: 1.75rem;
-      @media@desktop {
-        font-size: 2rem;
-      }
-    }
-    .role {
-      font-size: 1.25rem;
-    }
-    .info{
-      padding: 10px;
-      @media@desktop {
-        padding: 30px;
-      }
-    }
-}
-  .show {
-    display: block;
   }
+  @media@desktop {
+    width: 50%;
+    height: 60%;
+  }
+  .modal-header {
+    padding: 0;
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 3rem;
+      color: @font-main-color;
+    }
+  }
+  .header-content {
+    padding: 20px;
+    @media@desktop {
+      padding: 20px 40px;
+    }
+    img {
+      .img-circle();
+    }
+  }
+  .name {
+    font-size: 1.75rem;
+    @media@desktop {
+      font-size: 2rem;
+    }
+  }
+  .role {
+    font-size: 1.25rem;
+  }
+  .info {
+    padding: 10px;
+    @media@desktop {
+      padding: 30px;
+      font-size: @font-size-md;
+    }
+  }
+  a {
+    color: @font-main-color;
+  }
+}
+.show {
+  display: block;
+  animation: slideIn .3s ease-out;
+}

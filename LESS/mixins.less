@@ -1,15 +1,22 @@
-.flexy(@dir: row, @justify: space-between, @wrap: no-wrap){
-    display: flex;
-    justify-content: @justify;
-    flex-direction: @dir;
-    align-items: center;
-    flex-wrap: @wrap;
+.flexy(@dir: row, @justify: space-between, @wrap: no-wrap) {
+  display: flex;
+  justify-content: @justify;
+  flex-direction: @dir;
+  align-items: center;
+  flex-wrap: @wrap;
 }
-.btn (@padding: 10px 20px, @background: @btn-color, @color: @font-main-color){
-    padding: @padding;
-    background: @background;
-    color: @color;
-    border-radius: 10px;
-    font-size: 1.2em;
-    border-style: solid;
+.btn (@padding: 10px 20px, @background: @btn-color, @color: @font-main-color) {
+  padding: @padding;
+  background: @background;
+  color: @color;
+  border-radius: 10px;
+  font-size: 1.2em;
+  border-style: solid;
+}
+
+.img-circle() {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
 }
