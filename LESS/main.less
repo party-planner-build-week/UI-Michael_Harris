@@ -59,6 +59,16 @@
         }
     }
     a {
+        box-shadow: 0rem 0.3rem 0.3rem rgba(0, 0,0, .4);
+        transition: all .2s ease-out;
+        &:hover{
+            box-shadow: 0rem 0.3rem 1rem rgba(0, 0,0, .4);
+            transform: translateY(-4px);
+        }
+        &:active{
+            box-shadow: 0rem 0.3rem .2rem rgba(0, 0,0, .4);
+            transform: translateY(0);
+        }
         text-decoration: none;
         background: #fff;
         .btn(10px 20px,#fff, @font-secondary-color);
@@ -71,10 +81,10 @@
         .btn();
         &:focus{
             outline: none;
-            border-color: @background-secondary-color;
         }
     }
     #learn {
+        
         h2 {
             text-align: center;
             margin: 40px;
