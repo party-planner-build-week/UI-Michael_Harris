@@ -20,7 +20,13 @@
         }
         h1{
             margin: 10px;
-            font-size: 2.5rem;
+            font-size: @font-size-md;
+            background: @background-secondary-color;
+            padding: 5px;
+
+            span {
+                color: @background-main-color;
+            }
         }
         .btn-div{
             margin-top: 50px;
@@ -36,8 +42,7 @@
             width: 70%;
         }
     }
-    padding: 12px;
-    min-height: 90vh;
+    min-height: 100vh;
     font-family: @font-family;
     text-align: center;
     background: @background-white;
@@ -48,6 +53,9 @@
         margin: 20px auto;
         font-size: 1.1rem;
         width: 90%;
+        padding: 5px;
+        border-radius: 5px;
+        color: @font-main-color;
         @media@tablet{
             font-size: @font-size-lg;
         }
@@ -66,7 +74,7 @@
         }
         @media@desktop{
             width: 50vw;
-            height: 50vh;
+            height: 300px;
         }
     }
     .how-it-works {
