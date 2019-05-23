@@ -28,12 +28,10 @@ class Role {
     const all = document.querySelectorAll(`.team-container .team-member`);
     const team = Array.from(this.role);
     all.forEach(member => (member.style.display = "none"));
-    //console.log(team[0].childNodes[1].textContent);
     const names = team.sort((a, b) => {
       return a > b.childNodes[1].textContent;
     })
     names.forEach(member => (member.style.display = "flex"));
-    console.log(names);
   }
 }
 
@@ -42,10 +40,11 @@ class MemberLink {
     this.element = element;
     //get team member number
     this.data = element.dataset.member;
+    //create a modal with specific team member info
     this.modal = new MemberModal(element);
-
     this.info = element.querySelector(".team-member-description");
     this.showMore = element.querySelector(".show-more");
+    //Populate modal with info
     this.element.addEventListener("click", () => this.showInfo());
   }
 
@@ -57,6 +56,7 @@ class MemberLink {
 class MemberModal {
   constructor(element) {
     this.element = element;
+    //grab all relavent team member info
     this.name = element.querySelector(".team-member-name").textContent;
     this.role = element.querySelector(".team-member-role").textContent;
     this.info = element.querySelector(".team-member-description").textContent;
@@ -66,6 +66,7 @@ class MemberModal {
     this.close.addEventListener("click", () => this.closeBox());
   }
   show() {
+    //Populate modal with info
     modal.querySelector(".name").textContent = this.name;
     modal.querySelector(".role").textContent = this.role;
     modal.querySelector(".info").textContent = this.info;
