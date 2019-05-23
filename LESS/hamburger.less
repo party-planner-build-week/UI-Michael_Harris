@@ -12,6 +12,14 @@ nav {
         }
 
     }
+    @media@tablet{
+      .hamburger{
+        position: absolute;
+        right: 50px;
+        border-bottom: 2px solid @background-secondary-color;
+        top: 62px;
+      }
+    }
     .nav-links{
         padding-top: 150px;
         z-index: 20;
@@ -23,6 +31,9 @@ nav {
         height: 100vh;
         width: 100%;
         transition: left .3s ease-in-out;
+        @media@landscape{
+          padding: 0;
+        }
         @media@desktop {
             padding: 0;
             z-index: -20;
@@ -42,6 +53,7 @@ nav {
         margin: 40px 0;
         text-decoration: none;
         color: @font-main-color;
+
         @media@desktop{
             margin: 0;
             font-size: @font-size-sm;

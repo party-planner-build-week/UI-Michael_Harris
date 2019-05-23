@@ -1,7 +1,7 @@
   header{
     background: @background-tertiary-color;
     color: @font-main-color;
-    font-family: @font-family;
+    font-family: @font-header;
     border-bottom: 4px solid @background-secondary-color;
     .header-container{
       .flexy(column);
@@ -9,7 +9,11 @@
       box-shadow: 0 20px 0 @background-main-color;
 
       padding: 20px 0;
+      @media@tablet{
+        padding-top: 40px;
+      }
       @media@desktop {
+        padding: 0;
         flex-direction: row;
         width: 70%;
         margin: 0 auto;
@@ -17,6 +21,9 @@
       h1{
         font-style: italic;
         font-size: @font-size-md;
+        @media@tablet{
+          font-size: @font-size-xlrg;
+        }
       }
 
     }
