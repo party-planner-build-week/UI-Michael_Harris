@@ -1,67 +1,64 @@
 nav {
-    padding-top: 14px;
-    height: 100vh;
-    background: @background-tertiary-color;
-    border-bottom: 2px solid @background-secondary-color;
-    @media@desktop {
-        padding: 0;
-        width: 35%;
-        height: inherit;
-        .hamburger {
-            display: none;
-        }
-
+  padding-top: 14px;
+  height: 100vh;
+  background: @background-tertiary-color;
+  border-bottom: 2px solid @background-secondary-color;
+  @media@desktop {
+    padding: 0;
+    width: 35%;
+    height: inherit;
+    .hamburger {
+      display: none;
     }
-    @media@tablet{
-      .hamburger{
-        position: absolute;
-        right: 50px;
-        border-bottom: 2px solid @background-secondary-color;
-        top: 62px;
-      }
-    }
-    .nav-links{
-        padding-top: 150px;
-        z-index: 20;
-        position: fixed;
-        left: -1000px;
-        top: 0;
-        .flexy(column, flex-start);
-        background: @background-secondary-color;
-        height: 100vh;
-        width: 100%;
-        transition: left .3s ease-in-out;
-        @media@landscape{
-          padding: 0;
-        }
-        @media@desktop {
-            padding: 0;
-            z-index: -20;
-            .flexy(row, space-between);
-            position: static;
-            background: @background-tertiary-color;
-            color: @font-main-color;
-            height: inherit;
-            width: initial;
-        }
-
-    }
-
-      a{
-        text-align: center;
-        font-size: 1.8rem;
-        margin: 40px 0;
-        text-decoration: none;
-        color: @font-main-color;
-
-        @media@desktop{
-            margin: 0;
-            font-size: @font-size-sm;
-            padding: 2px;
-        }
-      }
-      .show-nav {
-        left: 0;
-      }
-
   }
+  @media@tablet {
+    .hamburger {
+      position: absolute;
+      right: 50px;
+      border-bottom: 2px solid @background-secondary-color;
+      top: 65px;
+    }
+  }
+  .nav-links {
+    padding-top: 150px;
+    z-index: 20;
+    position: fixed;
+    left: -1000px;
+    top: 0;
+    .flexy(column, flex-start);
+    background: @background-secondary-color;
+    height: 100vh;
+    width: 100%;
+    transition: left 0.3s ease-in-out;
+    @media@landscape {
+      padding: 0;
+    }
+    @media@desktop {
+      padding: 0;
+      z-index: -20;
+      .flexy(row, space-between);
+      position: static;
+      background: @background-tertiary-color;
+      color: @font-main-color;
+      height: inherit;
+      width: initial;
+    }
+  }
+
+  a {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 40px 0;
+    text-decoration: none;
+    color: @font-main-color;
+
+    @media@desktop {
+      margin: 0;
+      font-size: @font-size-sm;
+      padding: 2px;
+    }
+  }
+  .show-nav {
+    left: 0;
+  }
+}

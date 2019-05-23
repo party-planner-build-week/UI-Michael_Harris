@@ -6,73 +6,70 @@
     .flexy(row, space-around);
     padding: 30px 0;
 
-    @media@desktop{
+    @media@desktop {
       width: 50%;
       margin: 0 auto;
-      padding: 10px;
-      .tab-link{
+      padding: 20px;
+      .tab-link {
         margin: 0 20px;
-        &:hover{
+        &:hover {
           cursor: pointer;
-        } 
+        }
       }
     }
-
   }
-  .team-container{
+  .team-container {
     margin: 0 auto;
-    @media@desktop{
+    border-right: 2px solid @background-secondary-color;
+    border-left: 2px solid @background-secondary-color;
+    border-top: 2px solid @background-main-color;
+    border-bottom: 2px solid @background-main-color;
+    box-shadow: 0 0 1rem #000;
+    @media@desktop {
       padding-top: 100px;
       width: 70%;
     }
     .flexy(row, center, wrap);
-    .team-member{
+    .team-member {
       width: 45%;
       margin: 20px 0;
       text-align: center;
-      @media@desktop{
+      @media@desktop {
         width: 25%;
         height: 280px;
         .flexy(column, space-between);
-
-      }
-      .team-member-name{
-        font-size: 1.25rem;
-        @media@desktop{
-          font-size: 1.5rem;
-        }
-      }
-      .team-member-description{
-        display: none;
-      }
-      .team-member-role {
-        font-size: .8rem;
-        @media@desktop {
-          font-size: 1.1rem;
-        }
-
-      }
-      .show-more{
-        &:hover{
+        &:hover {
           cursor: pointer;
         }
       }
+      .team-member-name {
+        font-size: 1.25rem;
+        @media@desktop {
+          font-size: 1.5rem;
+        }
+      }
+      .team-member-description {
+        display: none;
+      }
+      .github {
+        display: none;
+      }
+      .team-member-role {
+        font-size: 0.8rem;
+        @media@desktop {
+          font-size: 1.1rem;
+        }
+      }
       .team-member-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
+        .img-circle();
         @media@desktop {
           width: 180px;
           height: 180px;
         }
       }
-
     }
-
   }
-.team-member.hide{
-  display: none;
-}
-
+  .team-member.hide {
+    display: none;
+  }
 }
