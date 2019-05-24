@@ -29,9 +29,14 @@ class Role {
     const team = Array.from(this.role);
     all.forEach(member => (member.style.display = "none"));
     const names = team.sort((a, b) => {
-      return a > b.childNodes[1].textContent;
+      // console.log(a.childNodes[1].textContent, b.childNodes[1].textContent)
+      // return b.childNodes[1].textContent < a.childNodes[1].textContent;
+      if(b.childNodes[1].textContent > a.childNodes[1].textContent){
+        return -1;
+      }
     })
     names.forEach(member => (member.style.display = "flex"));
+    //names.forEach(name => console.log(name.querySelector('.team-member-name').textContent) )
   }
 }
 
