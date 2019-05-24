@@ -3,10 +3,11 @@ header {
   color: @font-main-color;
   font-family: @font-header;
   border-bottom: 4px solid @background-secondary-color;
+  z-index: 100;
   .header-container {
     .flexy(column);
     height: 120px;
-    box-shadow: 0 20px 0 @background-main-color;
+    box-shadow: 0 4px 0 @background-main-color;
 
     padding: 20px 0;
     @media@tablet {
@@ -19,11 +20,19 @@ header {
       margin: 0 auto;
     }
     h1 {
+      font-family: @font-name;
       font-style: italic;
       font-size: @font-size-md;
       @media@tablet {
         font-size: @font-size-xlrg;
       }
     }
+  }
+}
+.sticky {
+  @media@desktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 }
